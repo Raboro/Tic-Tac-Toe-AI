@@ -5,7 +5,7 @@ package org.tictactoeai;
  * Contains a sign: Blank or one of the player signs
  *
  * @author MariusWoerfel
- * @since 1.0.0.SNAPSHOT
+ * @since 1.0-SNAPSHOT
  */
 public class Field {
 

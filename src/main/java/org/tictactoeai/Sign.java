@@ -4,7 +4,7 @@ package org.tictactoeai;
  * Enum representation of the three signs in TicTacToe
  *
  * @author MariusWoerfel
- * @since 1.0.0.SNAPSHOT
+ * @since 1.0-SNAPSHOT
  */
 public enum Sign {
 
