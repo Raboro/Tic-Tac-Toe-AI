@@ -19,7 +19,7 @@ public class Field {
         this.sign = sign;
     }
 
-    public boolean isEmpty() {
+    public boolean isBlank() {
         return isSign(Sign.BLANK);
     }
 
