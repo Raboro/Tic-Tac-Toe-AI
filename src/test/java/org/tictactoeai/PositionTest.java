@@ -6,6 +6,10 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
+/**
+ * @author MariusWoerfel
+ * @since 1.0-SNAPSHOT
+ */
 class PositionTest {
 
     @Test
