@@ -13,7 +13,7 @@ public class User extends Player {
     }
 
     @Override
-    int[][] move() {
-        return new int[0][];
+    Position move() {
+        return Position.create(0, 0).orElse(null);
     }
 }

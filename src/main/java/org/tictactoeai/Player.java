@@ -14,5 +14,5 @@ public abstract class Player {
         this.sign = sign;
     }
 
-    abstract int[][] move();
+    abstract Position move();
 }
