@@ -1,5 +1,7 @@
 package org.tictactoeai;
 
+import java.util.stream.IntStream;
+
 /**
  * Represents the board of the game
  *
@@ -24,7 +26,31 @@ public class Board {
     }
 
     public boolean isTerminalState() {
-        return false;
+        return isRowTerminalState() || isColumnTerminalState() || isDiagonalTerminalState();
+    }
+
+    private boolean isRowTerminalState() {
+        return IntStream.range(0, 3).anyMatch(this::isRowTerminalState);
+    }
+
+    private boolean isRowTerminalState(int i) {
+        return fields[i][0].equals(fields[i][1]) && fields[i][0].equals(fields[i][2]) && !fields[i][0].isBlank();
+    }
+
+    private boolean isColumnTerminalState() {
+        return IntStream.range(0, 3).anyMatch(this::isColumnTerminalState);
+    }
+
+    private boolean isColumnTerminalState(int i) {
+        return fields[0][i].equals(fields[1][i]) && fields[0][i].equals(fields[2][i]) && !fields[0][i].isBlank();
+    }
+
+    private boolean isDiagonalTerminalState() {
+        boolean bottomLeftToTopRight = fields[2][0].equals(fields[1][1]) && fields[2][0].equals(fields[0][2]) &&
+                !fields[0][2].isBlank();
+        boolean topLeftToBottomRight = fields[0][0].equals(fields[1][1]) && fields[0][0].equals(fields[2][2]) &&
+                !fields[2][2].isBlank();
+        return bottomLeftToTopRight || topLeftToBottomRight;
     }
 
     public void print() {
