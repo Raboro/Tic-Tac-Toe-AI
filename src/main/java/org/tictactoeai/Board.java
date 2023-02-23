@@ -28,6 +28,11 @@ public class Board {
     }
 
     public void print() {
-
+        String splitRow = "---|---|---\n";
+        String splitColumn = " | ";
+        String board = " " + fields[0][0] + splitColumn + fields[0][1] + splitColumn + fields[0][2] + "\n" + splitRow +
+                " " + fields[1][0] + splitColumn + fields[1][1] + splitColumn + fields[1][2] + "\n" + splitRow +
+                " " + fields[2][0] + splitColumn + fields[2][1] + splitColumn + fields[2][2] + "\n";
+        System.out.println(board);
     }
 }
