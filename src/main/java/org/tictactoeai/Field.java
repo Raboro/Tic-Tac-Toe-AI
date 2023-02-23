@@ -29,6 +29,6 @@ public class Field {
 
     @Override
     public String toString() {
-        return "Field { sign = '" + sign.character() + "' }";
+        return String.valueOf(sign.character());
     }
 }
