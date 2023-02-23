@@ -28,6 +28,12 @@ public class Field {
     }
 
     @Override
+    public boolean equals(Object o) {
+        Field compare = (Field) o;
+        return compare.isSign(sign);
+    }
+
+    @Override
     public String toString() {
         return String.valueOf(sign.character());
     }
