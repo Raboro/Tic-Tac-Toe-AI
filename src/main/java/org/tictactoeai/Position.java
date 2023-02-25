@@ -25,4 +25,9 @@ public class Position {
     private static boolean isValid(int x, int y) {
         return x >= 0 && x < 3 && y >= 0 && y < 3;
     }
+
+    @Override
+    public String toString() {
+        return "x= " + x + " y=" + y;
+    }
 }
