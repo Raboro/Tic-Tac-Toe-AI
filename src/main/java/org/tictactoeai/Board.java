@@ -21,6 +21,16 @@ public class Board {
         }
     }
 
+    public boolean isFull() {
+        return IntStream.range(0, 3)
+                .noneMatch(i -> IntStream.range(0, 3)
+                        .anyMatch(j -> fields[i][j].isBlank()));
+    }
+
+    public boolean isEmpty(Position position) {
+        return fields[position.x][position.y].isBlank();
+    }
+
     public void setField(Sign sign, Position position) {
         fields[position.x][position.y].setSign(sign);
     }
@@ -61,4 +71,6 @@ public class Board {
                 " " + fields[2][0] + splitColumn + fields[2][1] + splitColumn + fields[2][2] + "\n";
         System.out.println(board);
     }
+
+
 }
